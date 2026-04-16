@@ -20,9 +20,20 @@
         .text-content h2 { font-size: 18px; font-weight: bold; font-style: italic; text-decoration: underline; margin-top: 25px; margin-bottom: 10px; }
         
         .text-content ul { padding-left: 20px; margin: 0; list-style-type: disc; }
-        .image-box { position: relative; width: 100%; min-height: 450px; }
-        .image-box img { width: 100%; height: auto; border: 1px solid #999; box-shadow: 1px 1px 8px rgba(0,0,0,0.15); display: none; }
-        .image-box img.active { display: block; }
+
+        /* Smoother Transition Gallery CSS */
+        .image-box { position: relative; width: 100%; min-height: 450px; overflow: hidden; border: 1px solid #999; box-shadow: 1px 1px 8px rgba(0,0,0,0.15); }
+        .image-box img { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: auto; 
+            opacity: 0; 
+            transition: opacity 1.2s ease-in-out; /* Controls the fade speed */
+        }
+        .image-box img.active { opacity: 1; }
+        
         footer { text-align: center; padding: 60px 20px; font-size: 14px; color: #444; clear: both; font-weight: bold; }
     </style>
 </head>
@@ -99,7 +110,7 @@
             images[current].classList.remove('active');
             current = (current + 1) % images.length;
             images[current].classList.add('active');
-        }, 3000);
+        }, 4000); // 4 seconds interval gives enough time for a smooth 1.2s fade
     }
 </script>
 
