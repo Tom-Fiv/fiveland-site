@@ -10,16 +10,26 @@
         .logo-area { display: flex; align-items: center; gap: 20px; }
         .logo-text { font-style: italic; font-size: 42px; font-weight: bold; color: #555; }
         .logo-icon { height: 85px; width: auto; }
+        
+        /* Navigation - Fixed width to prevent "button jumping" */
         nav { display: flex; gap: 4px; }
-        nav a { background-color: #e0e0e0; width: 110px; height: 130px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #666; font-size: 16px; border: 1px solid #bbb; border-radius: 8px; transition: 0.2s; text-align: center; }
+        nav a { background-color: #e0e0e0; width: 110px; height: 130px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #666; font-size: 16px; border: 1px solid #bbb; border-radius: 8px; transition: 0.2s; text-align: center; box-sizing: border-box; }
         nav a:hover, nav a.active { background-color: #c0c0c0; color: #000; font-weight: bold; }
+        
         .main-container { max-width: 1400px; margin: 0 auto; padding: 50px 20px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }
-        .text-content { font-size: 16px; line-height: 1.6; padding-right: 20px; }
-        .text-content h2 { font-size: 18px; font-weight: bold; font-style: italic; text-decoration: underline; margin-top: 25px; margin-bottom: 10px; }
+        
+        /* Text Content Styling */
+        .text-content { font-size: 16px; line-height: 1.4; padding-right: 20px; height: 700px; overflow-y: auto; }
+        .text-content h2 { font-size: 17px; font-weight: bold; text-decoration: underline; margin-top: 20px; margin-bottom: 5px; color: #444; }
+        .text-content ul { padding-left: 20px; margin: 0 0 10px 0; list-style-type: disc; }
+        .text-content li { margin-bottom: 3px; }
+        
+        /* Gallery Styling */
         .image-box { position: relative; width: 100%; height: 550px; overflow: hidden; border: 1px solid #999; box-shadow: 1px 1px 8px rgba(0,0,0,0.15); background-color: #dce6e6; }
         .image-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1.5s ease-in-out; }
         .image-box img.active { opacity: 1; z-index: 2; }
-        footer { text-align: center; padding: 60px 20px; font-size: 14px; color: #444; clear: both; font-weight: bold; }
+        
+        footer { text-align: center; padding: 40px 20px; font-size: 14px; color: #444; clear: both; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -35,11 +45,57 @@
 <div class="main-container">
     <div class="text-content">
         <h2>VARD Brattvåg</h2>
-        <ul><li>Hull 802 – Anchor Handling Vessel</li></ul>
+        <ul><li>Hull 802 - Anchor Handling Vessel [cite: 5]</li></ul>
+
+        <h2>VARD Design, Ålesund</h2>
+        <ul>
+            <li>Project 1165 – Construction vessel Pre-study [cite: 7]</li>
+            <li>Project 1300 – Construction vessel Pre-study [cite: 8]</li>
+        </ul>
+
         <h2>Aker Solution - Kristiansand</h2>
-        <ul><li>Snorre A, rebuild – Package resp. Mud Control system</li></ul>
-        <h2>Teekay Petro jarl Trondheim</h2>
-        <ul><li>Conversion of tanker to FPSO, SIRI I at Remontowa Shipyard</li></ul>
+        <ul><li>Snorre A, rebuild – Package resp. Mud Control system [cite: 10]</li></ul>
+
+        <h2>VARD Shipyard, Søviknes</h2>
+        <ul>
+            <li>Hull 800 – VARD design, Construction Vessel [cite: 12]</li>
+            <li>Hull 811 – VARD design, Construction Vessel [cite: 13]</li>
+            <li>Hull 823 – VARD design, Construction Vessel [cite: 14]</li>
+        </ul>
+
+        <h2>Grenland Group - Agility Group Sandefjord</h2>
+        <ul>
+            <li>Basic design HILD project FSO. TOTAL – Martin Linge gas field [cite: 16]</li>
+            <li>Basic design COSL rig - COSL Prospector [cite: 17]</li>
+            <li>Martin Linge project – Conversion of Navion Britannia [cite: 18]</li>
+        </ul>
+
+        <h2>Aker Yards AS - STX OSV AS – VARD, Brevik</h2>
+        <ul>
+            <li>Hull 67, Aquanos - Tidewater Marine. New building Spesial purpose ship [cite: 20]</li>
+            <li>Hull 69, Solstad Shipping New building Spesial purpose ship [cite: 21]</li>
+            <li>Hull 733-36, K-Line - New building Supply ship [cite: 22]</li>
+            <li>Hull 720/21 - New building Rolls Royce design [cite: 23]</li>
+            <li>Hull 765/66 - New building Rolls Royce design [cite: 24]</li>
+            <li>Hull B756 – New building STX Design [cite: 25]</li>
+            <li>Hull B784/85 – New building Rolls Royce design [cite: 26]</li>
+            <li>Hull B795/97 – New building Rolls Royce design – shaft propelled [cite: 27]</li>
+            <li>And many more.. [cite: 28]</li>
+        </ul>
+
+        <h2>Moss Maritime</h2>
+        <ul><li>Design of MOSS 501 Anchor handling ship. Piping / machinery [cite: 30]</li></ul>
+
+        <h2>Teekay Petrojarl Trondheim/ Allum Marine Sandefjord</h2>
+        <ul><li>Conversion of tanker to FPSO, SIRI I at Remontowa Shipyard in Gdansk, Polen [cite: 32]</li></ul>
+
+        <h2>Teekay shipping, Grimstad/ Allum Marine Sandefjord</h2>
+        <ul>
+            <li>Conversion of 3 tankers. installation of 4 Aux. engines and Thrusters [cite: 34]</li>
+            <li>Navion Stavanger [cite: 35]</li>
+            <li>Navion Bergen [cite: 36]</li>
+            <li>Navion Gothenburg [cite: 37]</li>
+        </ul>
     </div>
     <div class="image-box" id="gallery">
         <img src="Images/Projects/Aker Snorre A (1).JPG" class="active">
@@ -51,11 +107,13 @@
 <script>
     let current = 0;
     const images = document.querySelectorAll('#gallery img');
-    setInterval(() => {
-        images[current].classList.remove('active');
-        current = (current + 1) % images.length;
-        images[current].classList.add('active');
-    }, 5000);
+    if(images.length > 1) {
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 5000);
+    }
 </script>
 </body>
 </html>
