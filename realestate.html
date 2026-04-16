@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realestate - Fiveland Marine AS</title>
+    <style>
+        body { font-family: "Times New Roman", Times, serif; margin: 0; background-color: #dce6e6; color: #333; }
+        header { background-color: white; padding: 20px 5% 40px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; }
+        .logo-area { display: flex; align-items: center; gap: 20px; }
+        .logo-text { font-style: italic; font-size: 42px; font-weight: bold; color: #555; }
+        .logo-icon { height: 85px; width: auto; }
+        nav { display: flex; gap: 4px; }
+        nav a { background-color: #e0e0e0; width: 110px; height: 130px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #666; font-size: 16px; border: 1px solid #bbb; border-radius: 8px; transition: 0.2s; text-align: center; }
+        nav a:hover, nav a.active { background-color: #c0c0c0; color: #000; font-weight: bold; }
+        .main-container { max-width: 1400px; margin: 0 auto; padding: 50px 20px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }
+        .text-content { font-size: 16px; line-height: 1.6; padding-right: 20px; }
+        .text-content h2 { font-size: 18px; font-weight: bold; font-style: italic; text-decoration: underline; margin-top: 25px; margin-bottom: 10px; }
+        .image-box { position: relative; width: 100%; height: 550px; overflow: hidden; border: 1px solid #999; box-shadow: 1px 1px 8px rgba(0,0,0,0.15); background-color: #dce6e6; }
+        .image-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1.5s ease-in-out; }
+        .image-box img.active { opacity: 1; z-index: 2; }
+        footer { text-align: center; padding: 60px 20px; font-size: 14px; color: #444; clear: both; font-weight: bold; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo-area"><div class="logo-text">Fiveland Marine AS</div><img src="logo_fiveland.jpg" alt="Logo" class="logo-icon"></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="realestate.html" class="active">Realestate</a>
+        <a href="boats.html">Boats</a>
+    </nav>
+</header>
+<div class="main-container">
+    <div class="text-content">
+        <h2>Real Estate Projects</h2>
+        <p>Information regarding our real estate consultancy and project management services in Norway.</p>
+    </div>
+    <div class="image-box" id="gallery">
+        <img src="Images/Projects/GA Project.jpg" class="active">
+    </div>
+</div>
+<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle</footer>
+<script>
+    let current = 0;
+    const images = document.querySelectorAll('#gallery img');
+    if(images.length > 1) {
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 5000);
+    }
+</script>
+</body>
+</html>
