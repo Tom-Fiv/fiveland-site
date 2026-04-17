@@ -3,7 +3,9 @@
      Fiveland Marine AS - realestate.html
      Revision: REV D
      Date: 2025-04
-     Notes: Full realestate text restored from source document.
+     Notes: Correct image paths (Images/RealEstate/).
+            object-fit changed to cover (no grey bars).
+            Footer fixed with flexbox (no longer floats below viewport).
             Added commented section headers for easy navigation.
      ============================================================ -->
 <html lang="en">
@@ -13,21 +15,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realestate - Fiveland Marine AS</title>
     <style>
-        body { font-family: "Times New Roman", Times, serif; margin: 0; background-color: #dce6e6; color: #333; min-height: 100vh; position: relative; padding-bottom: 120px; }
-        header { background-color: white; padding: 10px 5% 30px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; height: 140px; }
+        body { font-family: "Times New Roman", Times, serif; margin: 0; background-color: #dce6e6; color: #333; min-height: 100vh; display: flex; flex-direction: column; }
+        header { background-color: white; padding: 10px 5% 30px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; height: 140px; flex-shrink: 0; }
         .logo-area { display: flex; align-items: center; gap: 20px; margin-top: -20px; }
         .logo-text { font-style: italic; font-size: 42px; font-weight: bold; color: #555; }
         .logo-icon { height: 55px; width: auto; }
         nav { display: flex; gap: 4px; }
         nav a { background-color: #e0e0e0; width: 110px; height: 130px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #666; font-size: 16px; border: 1px solid #bbb; border-radius: 8px; transition: 0.2s; text-align: center; box-sizing: border-box; }
         nav a:hover, nav a.active { background-color: #c0c0c0; color: #000; font-weight: bold; }
-        .main-container { max-width: 1400px; margin: 0 auto; padding: 50px 20px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }
+        .main-container { max-width: 1400px; width: 100%; margin: 0 auto; padding: 50px 20px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; flex: 1; box-sizing: border-box; }
         .text-content { font-size: 16px; line-height: 1.6; }
         .text-content h2 { font-size: 18px; font-weight: bold; font-style: italic; text-decoration: underline; margin-top: 25px; margin-bottom: 10px; }
         .image-box { position: relative; width: 100%; height: 550px; overflow: hidden; border: 1px solid #999; box-shadow: 1px 1px 8px rgba(0,0,0,0.15); background-color: #dce6e6; }
-        .image-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1.5s ease-in-out; }
+        .image-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.5s ease-in-out; }
         .image-box img.active { opacity: 1; z-index: 2; }
-        footer { position: absolute; bottom: 30px; width: 100%; text-align: center; font-size: 14px; color: #444; font-weight: bold; }
+        footer { text-align: center; font-size: 14px; color: #444; font-weight: bold; padding: 20px 0; flex-shrink: 0; }
     </style>
 </head>
 <body>
@@ -80,10 +82,36 @@
     </div>
     <!-- END TEXT COLUMN -->
 
-    <!-- IMAGE GALLERY COLUMN -->
+    <!-- IMAGE GALLERY COLUMN: Images/RealEstate/ -->
     <div class="image-box" id="gallery">
-        <img src="Images/Projects/811 building at night.JPG" class="active">
+        <img src="Images/RealEstate/Bekkedalsv.13 Salg (63).jpg" class="active">
+        <img src="Images/RealEstate/Bekkedalsv.13 Salg (65).jpg">
+        <img src="Images/RealEstate/Bekkedalsv.13 Salg (66).jpg">
+        <img src="Images/RealEstate/Bekkedalsv.13 Salg (67).jpg">
+        <img src="Images/RealEstate/Bekkedalsv.13 Salg (68).jpg">
+        <img src="Images/RealEstate/Bekkedalsv.13 Salg (76).jpg">
+        <img src="Images/RealEstate/Bekkedalsv.13 Salg (77).jpg">
+        <img src="Images/RealEstate/Bekkedalsv.13 Salg (79).jpg">
+        <img src="Images/RealEstate/Bekkedalsv.13 Utsikt (8).jpg">
+        <img src="Images/RealEstate/Bekkedalsv. Bygging (65).jpg">
+        <img src="Images/RealEstate/Bekkedalsv. Bygging (88).jpg">
+        <img src="Images/RealEstate/Bekkedalsv. Bygging (219).jpg">
+        <img src="Images/RealEstate/Bekkedalsv. Bygging (300).jpg">
+        <img src="Images/RealEstate/Bekkedalsv. Bygging (322).jpg">
+        <img src="Images/RealEstate/Bekkedalsveien 13 (389).jpg">
+        <img src="Images/RealEstate/Bekkedalsveien 13 (398).jpg">
+        <img src="Images/RealEstate/Bekkedalsveien 13 (402).jpg">
+        <img src="Images/RealEstate/Bekkedalsveien 13 (418).jpg">
+        <img src="Images/RealEstate/Bekkedalsveien 13 (419).jpg">
+        <img src="Images/RealEstate/Bekkedalsveien 13 (422).jpg">
+        <img src="Images/RealEstate/Bekkedalsveien 13 (432).jpg">
+        <img src="Images/RealEstate/Bekkedalsveien 13 (446).jpg">
+        <img src="Images/RealEstate/Bygging Gulset.JPG">
+        <img src="Images/RealEstate/Bygging Gulset (2).jpg">
+        <img src="Images/RealEstate/Bygging Gulset (19).jpg">
+        <img src="Images/RealEstate/Bygging Gulset (39).jpg">
     </div>
+    <!-- END IMAGE GALLERY COLUMN -->
 
 </div>
 <!-- END MAIN CONTENT -->
@@ -91,17 +119,15 @@
 <!-- FOOTER -->
 <footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV D</footer>
 
-<!-- SCRIPT: Image gallery slideshow (5 second interval, only activates if more than 1 image) -->
+<!-- SCRIPT: Image gallery slideshow (5 second interval) -->
 <script>
     let current = 0;
     const images = document.querySelectorAll('#gallery img');
-    if (images.length > 1) {
-        setInterval(() => {
-            images[current].classList.remove('active');
-            current = (current + 1) % images.length;
-            images[current].classList.add('active');
-        }, 5000);
-    }
+    setInterval(() => {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;
+        images[current].classList.add('active');
+    }, 5000);
 </script>
 
 </body>
