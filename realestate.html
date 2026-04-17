@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- ============================================================
      Fiveland Marine AS - realestate.html
-     Revision: REV G
+     Revision: REV H
      Date: 2025-04
      Notes: Correct image paths (Images/RealEstate/).
             object-fit changed to cover (no grey bars).
@@ -34,7 +34,7 @@
         .gallery-btn:hover { background-color: rgba(0,0,0,0.65); }
         .gallery-btn.prev { left: 8px; }
         .gallery-btn.next { right: 8px; }
-        footer { text-align: center; font-size: 14px; color: #444; font-weight: bold; padding: 20px 0; flex-shrink: 0; }
+        footer { text-align: center; font-size: 14px; color: #444; padding: 20px 0; flex-shrink: 0; }
 
         /* ==========================================
            MOBILE LAYOUT: screens 768px wide or less
@@ -69,10 +69,10 @@
         <a href="engineering.html">Engineering</a>
         <a href="realestate.html" class="active">Realestate</a>
         <a href="boats.html">Boats</a>
-    </nav>
-    <button class="hamburger" id="hamburger" onclick="this.classList.toggle('open'); document.querySelector('nav').classList.toggle('open')" aria-label="Menu">
+    <button class="hamburger" id="hamburger" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">
         <span></span><span></span><span></span>
     </button>
+    </nav>
 </header>
 
 <!-- MAIN CONTENT: Two-column grid (text left, image gallery right) -->
@@ -146,7 +146,7 @@
 <!-- END MAIN CONTENT -->
 
 <!-- FOOTER -->
-<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV G</footer>
+<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV H</footer>
 
 <!-- SCRIPT: Image gallery slideshow (5 second interval) + prev/next arrows -->
 <script>
