@@ -1,6 +1,14 @@
 <!DOCTYPE html>
+<!-- ============================================================
+     Fiveland Marine AS - engineering.html
+     Revision: REV D
+     Date: 2025-04
+     Notes: Full engineering project list restored from source document.
+            Added commented section headers for easy navigation.
+     ============================================================ -->
 <html lang="en">
 <head>
+    <!-- HEAD: Meta, title, styles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering - Fiveland Marine AS</title>
@@ -23,6 +31,8 @@
     </style>
 </head>
 <body>
+
+<!-- HEADER: Logo + Navigation -->
 <header>
     <div class="logo-area">
         <div class="logo-text">Fiveland Marine AS</div>
@@ -35,46 +45,109 @@
         <a href="boats.html">Boats</a>
     </nav>
 </header>
+
+<!-- MAIN CONTENT: Two-column grid (scrollable project list left, image gallery right) -->
 <div class="main-container">
+
+    <!-- TEXT COLUMN: Project list (scrollable) -->
     <div class="text-content">
+
+        <!-- SECTION: VARD Brattvåg -->
         <h2>VARD Brattvåg</h2>
-        <ul><li>Hull 802 - Anchor Handling Vessel</li></ul>
+        <ul>
+            <li>Hull 802 - Anchor Handling Vessel</li>
+        </ul>
+
+        <!-- SECTION: VARD Design Ålesund -->
         <h2>VARD Design, Ålesund</h2>
         <ul>
             <li>Project 1165 – Construction vessel Pre-study</li>
             <li>Project 1300 – Construction vessel Pre-study</li>
         </ul>
+
+        <!-- SECTION: Aker Solution Kristiansand -->
         <h2>Aker Solution - Kristiansand</h2>
-        <ul><li>Snorre A, rebuild – Package resp. Mud Control system</li></ul>
+        <ul>
+            <li>Snorre A, rebuild – Package resp. Mud Control system.</li>
+        </ul>
+
+        <!-- SECTION: VARD Shipyard Søviknes -->
         <h2>VARD Shipyard, Søviknes</h2>
         <ul>
-            <li>Hull 800 – Construction Vessel</li>
-            <li>Hull 811 – Construction Vessel</li>
-            <li>Hull 823 – Construction Vessel</li>
+            <li>Hull 800 – VARD design, Construction Vessel.</li>
+            <li>Hull 811 – VARD design, Construction Vessel</li>
+            <li>Hull 823 – VARD design, Construction Vessel</li>
         </ul>
-        <h2>Grenland Group</h2>
+
+        <!-- SECTION: Grenland Group -->
+        <h2>Grenland Group - Agility Group Sandefjord</h2>
         <ul>
-            <li>Basic design HILD project FSO</li>
-            <li>Basic design COSL rig - COSL Prospector</li>
+            <li>Basic design HILD project FSO. TOTAL – Martin Linge gas field.</li>
+            <li>Basic design COSL rig - COSL Prospector.</li>
+            <li>Martin Linge project – Conversion of Navion Britannia</li>
         </ul>
-        <h2>Aker Yards / STX / VARD, Brevik</h2>
+
+        <!-- SECTION: Aker Yards / STX / VARD Brevik -->
+        <h2>Aker Yards AS - STX OSV AS – VARD, Brevik</h2>
         <ul>
-            <li>Hull 67, 69, 733-36, 720/21, 765/66, B756, B784/85</li>
+            <li>Hull 67, Aquanos - Tidewater Marine. New building Special purpose ship</li>
+            <li>Hull 69, Solstad Shipping New building Special purpose ship.</li>
+            <li>Hull 733-36, K-Line - New building Supply ship.</li>
+            <li>Hull 720/21 - New building Rolls Royce design</li>
+            <li>Hull 765/66 - New building Rolls Royce design</li>
+            <li>Hull B756 – New building STX Design</li>
+            <li>Hull B784/85 – New building Rolls Royce design</li>
+            <li>Hull B795/97 – New building Rolls Royce design – shaft propelled</li>
             <li>And many more..</li>
         </ul>
-        <h2>Teekay Petrojarl</h2>
-        <ul><li>Conversion of tanker to FPSO, SIRI I</li></ul>
+
+        <!-- SECTION: Moss Maritime -->
+        <h2>Moss Maritime</h2>
+        <ul>
+            <li>Design of MOSS 501 Anchor handling ship. Piping / machinery.</li>
+        </ul>
+
+        <!-- SECTION: Teekay Petrojarl -->
+        <h2>Teekay Petrojarl Trondheim / Allum Marine Sandefjord</h2>
+        <ul>
+            <li>Conversion of tanker to FPSO, SIRI I at Remontowa Shipyard in Gdansk, Polen.</li>
+        </ul>
+
+        <!-- SECTION: Teekay Shipping -->
+        <h2>Teekay Shipping, Grimstad / Allum Marine Sandefjord</h2>
+        <ul>
+            <li>Conversion of 3 tankers. Installation of 4 Aux. engines and Thrusters.</li>
+            <li>Navion Stavanger</li>
+            <li>Navion Bergen</li>
+            <li>Navion Gothenburg</li>
+        </ul>
+
     </div>
+    <!-- END TEXT COLUMN -->
+
+    <!-- IMAGE GALLERY COLUMN -->
     <div class="image-box" id="gallery">
         <img src="Images/Projects/Aker Snorre A (1).JPG" class="active">
         <img src="Images/Projects/Aker Snorre A (2).JPG">
         <img src="Images/Projects/811 Tulcea _1.JPG">
     </div>
+
 </div>
-<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV C</footer>
+<!-- END MAIN CONTENT -->
+
+<!-- FOOTER -->
+<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV D</footer>
+
+<!-- SCRIPT: Image gallery slideshow (5 second interval) -->
 <script>
-    let current = 0; const images = document.querySelectorAll('#gallery img');
-    setInterval(() => { images[current].classList.remove('active'); current = (current + 1) % images.length; images[current].classList.add('active'); }, 5000);
+    let current = 0;
+    const images = document.querySelectorAll('#gallery img');
+    setInterval(() => {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;
+        images[current].classList.add('active');
+    }, 5000);
 </script>
+
 </body>
 </html>

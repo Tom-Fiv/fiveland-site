@@ -1,6 +1,14 @@
 <!DOCTYPE html>
+<!-- ============================================================
+     Fiveland Marine AS - index.html
+     Revision: REV D
+     Date: 2025-04
+     Notes: Full home page text restored from source document.
+            Added commented section headers for easy navigation.
+     ============================================================ -->
 <html lang="en">
 <head>
+    <!-- HEAD: Meta, title, styles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiveland Marine AS - Home</title>
@@ -23,6 +31,8 @@
     </style>
 </head>
 <body>
+
+<!-- HEADER: Logo + Navigation -->
 <header>
     <div class="logo-area">
         <div class="logo-text">Fiveland Marine AS</div>
@@ -35,20 +45,44 @@
         <a href="boats.html">Boats</a>
     </nav>
 </header>
+
+<!-- MAIN CONTENT: Two-column grid (text left, image gallery right) -->
 <div class="main-container">
+
+    <!-- TEXT COLUMN -->
     <div class="text-content">
         <p><strong>Fiveland Marine AS</strong> is a small, flexible independent Consultancy company, situated in Bamble - Norway.</p>
         <p>We supply Engineering and consultant services to the Marine and Offshore marked worldwide.</p>
-        <p>We have a large network of different engineering companies and suppliers of equipment.</p>
+        <p>We have a large network of different engineering companies and suppliers of equipment. Which will be able to assist in different ways.</p>
+
+        <!-- SECTION: Fields of expertise -->
         <h2>Fields of expertise</h2>
         <ul>
             <li>Machinery, piping and HVAC engineering and designing</li>
             <li>Project management</li>
             <li>Technical management</li>
             <li>Procurement</li>
+            <li>Follow up towards authorities and classification society</li>
+            <li>Coordination of internal and external human resources</li>
             <li>Commissioning of ship systems</li>
+            <li>Consulting services along with follow-up ship rebuilding home or abroad</li>
+        </ul>
+
+        <!-- SECTION: Experience -->
+        <h2>Experience</h2>
+        <ul>
+            <li>Supply ships. New buildings</li>
+            <li>Anchor handlers. New buildings</li>
+            <li>Construction vessels. New buildings</li>
+            <li>Conversions of Supply ships and anchor handlers</li>
+            <li>Conversion of tankers</li>
+            <li>Floating production ships FPSO</li>
+            <li>Semi Sub Rig</li>
+            <li>Mud control system Snorre A Platform</li>
         </ul>
     </div>
+
+    <!-- IMAGE GALLERY COLUMN -->
     <div class="image-box" id="gallery">
         <img src="Images/Projects/811 building at night.JPG" class="active">
         <img src="Images/Projects/802 Bilde Model.jpg">
@@ -58,11 +92,23 @@
         <img src="Images/Projects/811 loading 3km of cable wire for 450t crane.JPG">
         <img src="Images/Projects/FPSO.jpg">
     </div>
+
 </div>
-<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV C</footer>
+<!-- END MAIN CONTENT -->
+
+<!-- FOOTER -->
+<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV D</footer>
+
+<!-- SCRIPT: Image gallery slideshow (5 second interval) -->
 <script>
-    let current = 0; const images = document.querySelectorAll('#gallery img');
-    setInterval(() => { images[current].classList.remove('active'); current = (current + 1) % images.length; images[current].classList.add('active'); }, 5000);
+    let current = 0;
+    const images = document.querySelectorAll('#gallery img');
+    setInterval(() => {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;
+        images[current].classList.add('active');
+    }, 5000);
 </script>
+
 </body>
 </html>

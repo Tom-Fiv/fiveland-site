@@ -1,6 +1,14 @@
 <!DOCTYPE html>
+<!-- ============================================================
+     Fiveland Marine AS - boats.html
+     Revision: REV D
+     Date: 2025-04
+     Notes: Full boats text restored from source document.
+            Added commented section headers for easy navigation.
+     ============================================================ -->
 <html lang="en">
 <head>
+    <!-- HEAD: Meta, title, styles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boats - Fiveland Marine AS</title>
@@ -23,6 +31,8 @@
     </style>
 </head>
 <body>
+
+<!-- HEADER: Logo + Navigation -->
 <header>
     <div class="logo-area">
         <div class="logo-text">Fiveland Marine AS</div>
@@ -35,20 +45,43 @@
         <a href="boats.html" class="active">Boats</a>
     </nav>
 </header>
+
+<!-- MAIN CONTENT: Two-column grid (text left, image gallery right) -->
 <div class="main-container">
+
+    <!-- TEXT COLUMN -->
     <div class="text-content">
-        <h2>Marine Vessels & Systems</h2>
-        <p>Expertise in Anchor Handlers, Supply Ships, and specialized vessel commissioning.</p>
+
+        <!-- SECTION: Marine Vessels intro -->
+        <h2>Marine Vessels &amp; Systems</h2>
+        <p>Fiveland Marin-Import AS was a Yacht and Boat import company established in 2009 and closed down in 2014.</p>
+        <p>We were the official Norwegian Import-company for the American brands SeaRay and Meridian Yachts.</p>
+
     </div>
+    <!-- END TEXT COLUMN -->
+
+    <!-- IMAGE GALLERY COLUMN -->
     <div class="image-box" id="gallery">
         <img src="Images/Projects/802 Bilde Model.jpg" class="active">
         <img src="Images/Projects/811 loading 3km of cable wire for 450t crane.JPG">
     </div>
+
 </div>
-<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no</footer>
+<!-- END MAIN CONTENT -->
+
+<!-- FOOTER -->
+<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV D</footer>
+
+<!-- SCRIPT: Image gallery slideshow (5 second interval) -->
 <script>
-    let current = 0; const images = document.querySelectorAll('#gallery img');
-    setInterval(() => { images[current].classList.remove('active'); current = (current + 1) % images.length; images[current].classList.add('active'); }, 5000);
+    let current = 0;
+    const images = document.querySelectorAll('#gallery img');
+    setInterval(() => {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;
+        images[current].classList.add('active');
+    }, 5000);
 </script>
+
 </body>
 </html>
