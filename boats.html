@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- ============================================================
      Fiveland Marine AS - boats.html
-     Revision: REV D
+     Revision: REV F
      Date: 2025-04
      Notes: Correct image paths (Images/Yachts/).
             object-fit changed to cover (no grey bars).
@@ -29,6 +29,11 @@
         .image-box { position: relative; width: 100%; height: 550px; overflow: hidden; border: 1px solid #999; box-shadow: 1px 1px 8px rgba(0,0,0,0.15); background-color: #dce6e6; }
         .image-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.5s ease-in-out; }
         .image-box img.active { opacity: 1; z-index: 2; }
+        /* GALLERY ARROWS */
+        .gallery-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; background-color: rgba(0,0,0,0.35); color: white; border: none; font-size: 28px; padding: 10px 16px; cursor: pointer; border-radius: 4px; transition: background-color 0.2s; user-select: none; }
+        .gallery-btn:hover { background-color: rgba(0,0,0,0.65); }
+        .gallery-btn.prev { left: 8px; }
+        .gallery-btn.next { right: 8px; }
         footer { text-align: center; font-size: 14px; color: #444; font-weight: bold; padding: 20px 0; flex-shrink: 0; }
     </style>
 </head>
@@ -64,6 +69,7 @@
 
     <!-- IMAGE GALLERY COLUMN: Images/Yachts/ -->
     <div class="image-box" id="gallery">
+        <button class="gallery-btn prev" onclick="changeImage(-1)">&#10094;</button>
         <img src="Images/Yachts/210OVE Web.JPG" class="active">
         <img src="Images/Yachts/255DAE Web (1).JPG">
         <img src="Images/Yachts/255DAE Web (2).JPG">
@@ -83,6 +89,7 @@
         <img src="Images/Yachts/355DAE Web (12).jpg">
         <img src="Images/Yachts/Meridian 391SB Web (1).jpg">
         <img src="Images/Yachts/Meridian 391SB Web (2).jpg">
+        <button class="gallery-btn next" onclick="changeImage(1)">&#10095;</button>
     </div>
     <!-- END IMAGE GALLERY COLUMN -->
 
@@ -90,17 +97,27 @@
 <!-- END MAIN CONTENT -->
 
 <!-- FOOTER -->
-<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV D</footer>
+<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV F</footer>
 
-<!-- SCRIPT: Image gallery slideshow (5 second interval) -->
+<!-- SCRIPT: Image gallery slideshow (5 second interval) + prev/next arrows -->
 <script>
     let current = 0;
     const images = document.querySelectorAll('#gallery img');
-    setInterval(() => {
+    let timer = setInterval(nextImage, 5000);
+
+    function nextImage() {
         images[current].classList.remove('active');
         current = (current + 1) % images.length;
         images[current].classList.add('active');
-    }, 5000);
+    }
+
+    function changeImage(direction) {
+        images[current].classList.remove('active');
+        current = (current + direction + images.length) % images.length;
+        images[current].classList.add('active');
+        clearInterval(timer);
+        timer = setInterval(nextImage, 5000);
+    }
 </script>
 
 </body>
