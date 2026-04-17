@@ -14,8 +14,8 @@
         nav a { background-color: #e0e0e0; width: 110px; height: 130px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #666; font-size: 16px; border: 1px solid #bbb; border-radius: 8px; transition: 0.2s; text-align: center; box-sizing: border-box; }
         nav a:hover, nav a.active { background-color: #c0c0c0; color: #000; font-weight: bold; }
         .main-container { max-width: 1400px; margin: 0 auto; padding: 50px 20px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }
-        .text-content { font-size: 16px; line-height: 1.4; height: 600px; overflow-y: auto; padding-right: 15px; }
-        .text-content h2 { font-size: 18px; font-weight: bold; font-style: italic; text-decoration: underline; margin-top: 25px; margin-bottom: 10px; }
+        .text-content { font-size: 15px; line-height: 1.4; height: 650px; overflow-y: auto; padding-right: 15px; }
+        .text-content h2 { font-size: 17px; font-weight: bold; text-decoration: underline; margin-top: 20px; margin-bottom: 5px; color: #444; }
         .image-box { position: relative; width: 100%; height: 550px; overflow: hidden; border: 1px solid #999; box-shadow: 1px 1px 8px rgba(0,0,0,0.15); background-color: #dce6e6; }
         .image-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1.5s ease-in-out; }
         .image-box img.active { opacity: 1; z-index: 2; }
@@ -39,6 +39,11 @@
     <div class="text-content">
         <h2>VARD Brattvåg</h2>
         <ul><li>Hull 802 - Anchor Handling Vessel</li></ul>
+        <h2>VARD Design, Ålesund</h2>
+        <ul>
+            <li>Project 1165 – Construction vessel Pre-study</li>
+            <li>Project 1300 – Construction vessel Pre-study</li>
+        </ul>
         <h2>Aker Solution - Kristiansand</h2>
         <ul><li>Snorre A, rebuild – Package resp. Mud Control system</li></ul>
         <h2>VARD Shipyard, Søviknes</h2>
@@ -48,7 +53,17 @@
             <li>Hull 823 – Construction Vessel</li>
         </ul>
         <h2>Grenland Group</h2>
-        <ul><li>Basic design HILD project FSO</li></ul>
+        <ul>
+            <li>Basic design HILD project FSO</li>
+            <li>Basic design COSL rig - COSL Prospector</li>
+        </ul>
+        <h2>Aker Yards / STX / VARD, Brevik</h2>
+        <ul>
+            <li>Hull 67, 69, 733-36, 720/21, 765/66, B756, B784/85</li>
+            <li>And many more..</li>
+        </ul>
+        <h2>Teekay Petrojarl</h2>
+        <ul><li>Conversion of tanker to FPSO, SIRI I</li></ul>
     </div>
     <div class="image-box" id="gallery">
         <img src="Images/Projects/Aker Snorre A (1).JPG" class="active">
@@ -56,7 +71,7 @@
         <img src="Images/Projects/811 Tulcea _1.JPG">
     </div>
 </div>
-<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no</footer>
+<footer>Fiveland Marine AS - 990 503 214 - Asdalveien 117, 3967 Stathelle - 46 44 44 46 - Post@Fiveland.no | REV C</footer>
 <script>
     let current = 0; const images = document.querySelectorAll('#gallery img');
     setInterval(() => { images[current].classList.remove('active'); current = (current + 1) % images.length; images[current].classList.add('active'); }, 5000);
